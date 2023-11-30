@@ -1,0 +1,15 @@
+---
+import Layout from "../components/Layout.astro";
+import Button from '../components/ButtonSubcribe'; 
+import { ToastContainer , toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+
+---
+
+<Layout pageTitle="Pagina Inical" pageDescription="esta es una pagina para ofrecer servicios de desarrollo de sofwware ">
+<h1>Paguna Inicial</h1>
+<p>Bienvenido a mi blog</p>
+
+<Button client:load/>
+
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from "../../components/Layout.astro";
+
+
+const post = await Astro.glob('./posts/*.md')
+
+---
+
+<Layout pageTitle="Blog de Desarrollo" pageDescription="Tutoriales de desarrollo y programacion">
+    <h1>blog</h1>
+
+   <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="">
+
+   {
+     post.map(post =>{
+        return  <a href={post.url} class="link">{post.frontmatter.title}</a>
+     })
+   }
+   <style>
+       .link{
+        background: wheat;
+        color: black;
+        text-decoration: none ;
+        display: block;
+        margin-bottom: 4px;
+       }
+   </style>
+
+</Layout>
